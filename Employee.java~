@@ -14,7 +14,6 @@ public class Employee{
   private int salaryHist;
   private int vacationBal;//in days
   private int annualBonus;
-  private String password;
 
   /** 
    * Constructor for our method that takes in values for Salary, 
@@ -28,7 +27,6 @@ public class Employee{
     this.salary = sal;
     this.vacationBal = Vbal;
     this.annualBonus = AnBon;
-    this.password = "AJDLIAFYI";
   }
   //getters
   protected String getName(){
@@ -58,9 +56,6 @@ public class Employee{
   }
   protected void setName(String newName){
     name = newName;
-  }
-  private void setPW(String pass){
-    password = pass;
   }
   
   //toString method that basically prints out all the persons information
