@@ -11,7 +11,8 @@ public class Employee{
   private String name;
   private String position;
   private int salary;//monthly
-  private int salaryHist;
+  private int[] salaryHist = new int[5];
+  private int count=1; //number of previous salaries already had
   private int vacationBal;//in days
   private int annualBonus;
   private String password;
@@ -29,6 +30,7 @@ public class Employee{
     this.vacationBal = Vbal;
     this.annualBonus = AnBon;
     this.password = "AJDLIAFYI";
+    salaryHist[0] = salary;
   }
   //getters
   protected String getName(){
@@ -49,6 +51,9 @@ public class Employee{
   //setters
   protected void setSalary(int newSalary){
     salary= newSalary;
+    salaryHist[count]= newSalary;
+    count++;
+    
   }
   protected void setVacationBalance(int newVbal){
     vacationBal=newVbal;
