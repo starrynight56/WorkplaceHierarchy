@@ -6,7 +6,6 @@ import java.util.HashMap;
 public class Manager extends Employee{
   //Each manager has one or more employees reporting to them
   private HashMap<Integer,Employee> roster=new HashMap<Integer,Employee>();
-  private int sizeRoster = 0;//size of roster
   
   public Manager(String name,String pos,int sal, int Vbal, int AnBon){
     super(name,pos,sal,Vbal,AnBon);
@@ -16,7 +15,6 @@ public class Manager extends Employee{
   public void addEmployee(String name,String po,int sal, int Vbal, int AnBon){
     Employee person = new Employee(name,po, sal,Vbal,AnBon);
     roster.put(person.getID(),person);
-    sizeRoster++;
   }
   //existing employee
   public void addEmployee(int employeeID,Employee employee){
